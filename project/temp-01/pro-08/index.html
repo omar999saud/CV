@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fitness Store (project-09)</title>
+
+    <!-- normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- slider swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <!-- 
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== (01) -->
+
+    <header class="header">
+        <nav class="container">
+
+            <!-- hamburger -->
+            <div class="menu_hamburger hide_for_desktop">
+                <!-- ((btn__hamburger برجر) => (click("open"))) js-->
+
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- logo -->
+            <a href="#" class="logo">
+                <i class="fa-solid fa-dumbbell"></i>
+                Fitness
+            </a>
+
+            <!-- navbar -->
+            <div class="navbar hide_for_desktop">
+                <a href="#home">home</a>
+                <a href="#about">about</a>
+                <a href="#features">features</a>
+                <a href="#pricing">pricing</a>
+                <a href="#trainers">trainers</a>
+                <a href="#testimonials">testimonials</a>
+                <a href="#blogs">blogs</a>
+            </div>
+
+            <!-- links -->
+            <ul class="links hide_for_mobile">
+                <a href="#home">home</a>
+                <a href="#about">about</a>
+                <a href="#features">features</a>
+                <a href="#pricing">pricing</a>
+                <a href="#trainers">trainers</a>
+                <a href="#testimonials">testimonials</a>
+                <a href="#blogs">blogs</a>
+            </ul>
+
+            <!-- icon -->
+            <div class="nav__icons">
+
+                <i href="#" class="fas fa-search" id="search_btn"></i>
+                <!-- ((search_btn) => (click("search_container"))) js -->
+
+                <i href="#" class="fas fa-shopping-cart" id="shopping_btn"></i>
+                <!-- ((shopping_btn) => (click("cart_item_container"))) js -->
+
+                <div id="login_btn">
+                    <!-- ((login_btn) => (click = (opacity)("login_container"))) js -->
+
+                    <button class="btn_normal hide_for_mobile">login</button>
+                    <i class="far fa-user hide_for_desktop"></i>
+                </div>
+
+            </div>
+
+        </nav>
+
+        <div class="search_container">
+            <!-- = js (search_form (toggle("active"))) -->
+
+            <input type="text" placeholder="search here..." id="search_box">
+            <label for="search_box" class="fas fa-search"></label>
+        </div>
+
+        <div class="shopping_container">
+            <!-- = js (cart_item_container (toggle("active"))) -->
+
+            <!-- 11 -->
+            <div class="cart_item">
+                <span class="fas fa-times"></span>
+
+                <img src="images/dumbbell-01.jpg" alt="">
+
+                <div class="content">
+                    <h3>cart item 01</h3>
+                    <div class="price">$99.99/-</div>
+                </div>
+            </div>
+
+            <div class="cart_item">
+                <span class="fas fa-times"></span>
+
+                <img src="images/dumbbell-02.jpg" alt="">
+
+                <div class="content">
+                    <h3>cart item 02</h3>
+                    <div class="price">$99.99/-</div>
+
+                </div>
+            </div>
+
+            <div class="cart_item">
+                <span class="fas fa-times"></span>
+
+                <img src="images/dumbbell-03.jpg" alt="">
+
+                <div class="content">
+                    <h3>cart item 03</h3>
+                    <div class="price">$99.99/-</div>
+                </div>
+            </div>
+
+            <div class="cart_item">
+                <span class="fas fa-times"></span>
+
+                <img src="images/dumbbell-04.jpg" alt="">
+
+                <div class="content">
+                    <h3>cart item 04</h3>
+                    <div class="price">$99.99/-</div>
+                </div>
+            </div>
+
+            <!-- 22 -->
+            <a href="#" class="btn_normal">checkout now</a>
+
+        </div>
+
+        <div class="login_container">
+            <!-- ((login_container) => (toggle("active"))) js -->
+
+            <span class="fas fa-times" id="close_icon"></span>
+            <!-- ((close_icon) => (click("login_container"))) js -->
+
+            <form action="">
+                <h3>user login</h3>
+
+                <input type="email" placeholder="email" class="box">
+                <input type="password" placeholder="password" class="box">
+
+                <p>forget your password <a href="#">click here</a></p>
+                <input type="submit" value="login now" class="btn_normal">
+                <p>or login with</p>
+
+                <div class="buttons">
+                    <a href="#" class="btn_normal">google</a>
+                    <a href="#" class="btn_normal">facebook</a>
+                </div>
+
+                <p>don't have an account <a href="#">create one</a></p>
+            </form>
+        </div>
+
+    </header>
+
+    <!-- 
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== (02) -->
+
+    <div class="home" id="home">
+
+        <div class="swiper container_slider">
+
+            <!-- www -->
+            <div class="swiper-wrapper www">
+
+                <!-- ==========(111)============== -->
+                <div class="swiper-slide box" style="background: url(images/home-bg-1.jpg);">
+
+                    <!-- container -->
+                    <div class="container">
+
+                        <div class="content ">
+                            <span>be strong, be fit</span>
+                            <h3>Make yourself stronger than your excuses.</h3>
+                            <a href="#" class="btn">get started</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ==========(222)============== -->
+                <div class="swiper-slide box" style="background: url(images/home-bg-2.jpg);">
+                    <div class="container">
+
+                        <div class="content ">
+                            <span>be strong, be fit</span>
+                            <h3>Make yourself stronger than your excuses.</h3>
+                            <a href="#" class="btn">get started</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ==========(333)============== -->
+                <div class="swiper-slide box" style="background: url(images/home-bg-3.jpg);">
+                    <div class="container">
+
+                        <div class="content ">
+                            <span>be strong, be fit</span>
+                            <h3>Make yourself stronger than your excuses.</h3>
+                            <a href="#" class="btn">get started</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </div>
+
+    <!-- 
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== (03) -->
+
+    <div class="about" id="about">
+        <div class="container">
+
+            <div class="image">
+                <img src="images/about-img.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <span>About Us</span>
+
+                <h3 class="title">Every Day Is A Chance To Become Better</h3>
+
+                <p>
+                    Every Day Is A Chance To Become Better
+                </p>
+
+                <div class="box_container">
+
+                    <div class="box">
+                        <h3><i class="fas fa-check"></i>body and mind</h3>
+                        <p>
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Est, Enim.
+                        </p>
+                    </div>
+
+                    <div class="box">
+                        <h3><i class="fas fa-check"></i>Healthy Life</h3>
+                        <p>
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Est, Enim.
+                        </p>
+                    </div>
+
+                    <div class="box">
+                        <h3><i class="fas fa-check"></i>Strategies</h3>
+                        <p>
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Est, Enim.
+                        </p>
+                    </div>
+
+                    <div class="box">
+                        <h3><i class="fas fa-check"></i>Workout</h3>
+                        <p>
+                            Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Est, Enim.
+                        </p>
+                    </div>
+
+                </div>
+
+                <a href="#" class="btn">read more</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== (04) -->
+    <div class="Separator "></div>
+
+    <div class="features" id="features">
+
+        <h1 class="heading">gym features</h1>
+
+        <div class="container">
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/f-img-1.jpg" alt="">
+                </div>
+
+                <div class="content">
+                    <img src="images/icon-1.jpg" alt="">
+
+                    <h3>Body Building</h3>
+
+                    <p>
+                        Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Similique, Atque.
+                    </p>
+
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="box second">
+                <div class="image">
+                    <img src="images/f-img-2.jpg" alt="">
+                </div>
+
+                <div class="content">
+                    <img src="images/icon-2.jpg" alt="">
+
+                    <h3>Gym For Men</h3>
+
+                    <p>
+                        Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Similique, Atque.
+                    </p>
+
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/f-img-3.jpg" alt="">
+                </div>
+
+                <div class="content">
+                    <img src="images/icon-3.jpg" alt="">
+
+                    <h3>Gym For Women</h3>
+
+                    <p>
+                        Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Similique, Atque.
+                    </p>
+
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== (05) -->
+
+    <div class="pricing" id="pricing">
+
+        <h1 class="heading">pricing</h1>
+
+        <div class="container">
+
+
+            <div class="box">
+                <div class="head">
+                    <h3>Basic</h3>
+                    <span>19</span>
+                </div>
+
+                <ul>
+                    <li>Personal Training</li>
+                    <li>Cardio Exercise</li>
+                    <li>Weight Lifting</li>
+                    <li>Diet Plans</li>
+                    <li>Overall Results</li>
+                </ul>
+
+                <a href="#" class="btn">get started</a>
+            </div>
+
+            <div class="box">
+                <div class="head">
+                    <h3>PREMIUM</h3>
+                    <span>30</span>
+                </div>
+
+                <ul>
+                    <li>Personal Training</li>
+                    <li>Cardio Exercise</li>
+                    <li>Weight Lifting</li>
+                    <li>Diet Plans</li>
+                    <li>Overall Results</li>
+                </ul>
+
+                <a href="#" class="btn">get started</a>
+            </div>
+
+            <div class="box">
+                <div class="head">
+                    <h3>PRO</h3>
+                    <span>90</span>
+                </div>
+
+                <ul>
+                    <li>Personal Training</li>
+                    <li>Cardio Exercise</li>
+                    <li>Weight Lifting</li>
+                    <li>Diet Plans</li>
+                    <li>Overall Results</li>
+                </ul>
+
+                <a href="#" class="btn">get started</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== (06) -->
+    <div class="Separator "></div>
+
+    <div class="trainers" id="trainers">
+
+        <h1 class="heading">expert trainers</h1>
+
+        <div class="container">
+
+            <div class="box">
+                <img src="images/trainer-1.jpg" alt="">
+
+                <div class="content">
+                    <span>Expert Trainer</span>
+                    <h3>Sami</h3>
+
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-pinterest"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/trainer-2.jpg" class="mmm02" alt="">
+
+                <div class="content">
+                    <span>Expert Trainer</span>
+                    <h3>Sarah</h3>
+
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-pinterest"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/trainer-3.jpg" alt="">
+
+                <div class="content">
+                    <span>Expert Trainer</span>
+                    <h3>Waleed</h3>
+
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-pinterest"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/trainer-4.jpg" alt="">
+
+                <div class="content">
+                    <span>Expert Trainer</span>
+                    <h3>Samira</h3>
+
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-pinterest"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== (07) -->
+
+    <div class="banner">
+        <div class="container">
+
+            <span>Join Us Now</span>
+            <h3>GET UPTO 50% DISCOUNT</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat architecto nesciunt aut sapiente quis
+                inventore quam vitae quod illum incidunt.
+            </p>
+            <a href="#" class="btn">get discount</a>
+
+        </div>
+    </div>
+
+    <!-- 
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== (08) -->
+
+    <div class="testimonials" id="testimonials">
+
+        <h1 class="heading">testimonials</h1>
+
+        <div class="container">
+
+            <div class="information">
+                <h3>what our clients says</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis voluptas praesentium asperiores
+                    fugiat,
+                    excepturi odit obcaecati a voluptatibus earum quisquam?
+                </p>
+                <a href="#" class="btn">read more</a>
+            </div>
+
+            <!-- container_slider -->
+            <div class="swiper container_slider">
+
+                <!-- www -->
+                <div class="swiper-wrapper www">
+
+                    <!-- box 11 -->
+                    <div class="swiper-slide box">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, quo.
+                        </p>
+
+                        <div class="user">
+                            <img src="images/pic-1.jpg" alt="">
+
+                            <div class="info">
+                                <h3>Badr</h3>
+                                <span>designer</span>
+                            </div>
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                    </div>
+
+                    <!-- box 22 -->
+                    <div class="swiper-slide box">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, quo.
+                        </p>
+
+                        <div class="user">
+                            <img src="images/pic-2.jpg" alt="">
+
+                            <div class="info">
+                                <h3>Sarah</h3>
+                                <span>designer</span>
+                            </div>
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                    </div>
+
+                    <!-- box 33 -->
+                    <div class="swiper-slide box">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, quo.
+                        </p>
+
+                        <div class="user">
+                            <img src="images/pic-3.jpg" alt="">
+
+                            <div class="info">
+                                <h3>Hamza</h3>
+                                <span>designer</span>
+                            </div>
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                    </div>
+
+                    <!-- box 44 -->
+                    <div class="swiper-slide box">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, quo.
+                        </p>
+
+                        <div class="user">
+                            <img src="images/pic-4.jpg" alt="">
+
+                            <div class="info">
+                                <h3>Rima</h3>
+                                <span>designer</span>
+                            </div>
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== (09) -->
+    <div class="Separator "></div>
+
+    <div class="blogs" id="blogs">
+
+        <h1 class="heading">daily posts</h1>
+
+        <div class="swiper container_slider container">
+
+            <div class="swiper-wrapper www">
+
+                <!-- 11 -->
+                <div class="swiper-slide box">
+
+                    <div class="image">
+                        <img src="images/blog-1.jpg" alt="">
+                    </div>
+
+                    <div class="content">
+                        <div class="link">
+                            <a href="#">by user</a> <span>|</span> <a href="#">21st nov, 2022</a>
+                        </div>
+
+                        <h3>fitness is not about being better than someone else</h3>
+
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, tenetur?
+                        </p>
+
+                        <a href="#" class="btn">read more</a>
+                    </div>
+                </div>
+
+                <!-- 22 -->
+                <div class="swiper-slide box">
+
+                    <div class="image">
+                        <img src="images/blog-2.jpg" alt="">
+                    </div>
+
+                    <div class="content">
+                        <div class="link">
+                            <a href="#">by user</a> <span>|</span> <a href="#">21st nov, 2022</a>
+                        </div>
+
+                        <h3>fitness is not about being better than someone else</h3>
+
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, tenetur?
+                        </p>
+
+                        <a href="#" class="btn">read more</a>
+                    </div>
+                </div>
+
+                <!-- 33 -->
+                <div class="swiper-slide box">
+
+                    <div class="image">
+                        <img src="images/blog-3.jpg" alt="">
+                    </div>
+
+                    <div class="content">
+                        <div class="link">
+                            <a href="#">by user</a> <span>|</span> <a href="#">21st nov, 2022</a>
+                        </div>
+
+                        <h3>fitness is not about being better than someone else</h3>
+
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, tenetur?
+                        </p>
+
+                        <a href="#" class="btn">read more</a>
+                    </div>
+                </div>
+
+                <!-- 44 -->
+                <div class="swiper-slide box">
+
+                    <div class="image">
+                        <img src="images/blog-4.jpg" alt="">
+                    </div>
+
+                    <div class="content">
+                        <div class="link">
+                            <a href="#">by user</a> <span>|</span> <a href="#">21st nov, 2022</a>
+                        </div>
+
+                        <h3>fitness is not about being better than someone else</h3>
+
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, tenetur?
+                        </p>
+
+                        <a href="#" class="btn">read more</a>
+                    </div>
+                </div>
+
+                <!-- 55 -->
+                <div class="swiper-slide box">
+
+                    <div class="image">
+                        <img src="images/blog-5.jpg" alt="">
+                    </div>
+
+                    <div class="content">
+                        <div class="link">
+                            <a href="#">by user</a> <span>|</span> <a href="#">21st nov, 2022</a>
+                        </div>
+
+                        <h3>fitness is not about being better than someone else</h3>
+
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, tenetur?
+                        </p>
+
+                        <a href="#" class="btn">read more</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+    </div>
+
+    <!-- 
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== (10) -->
+
+    <footer class="footer">
+        <div class="container">
+
+            <!-- social -->
+            <div class="box_social">
+
+                <ul class="col">
+                    <li>
+                        <a href="#" class="twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="col">
+                    <li>
+                        <a href="#" class="instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="linkedin">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="pinterest">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- link_s -->
+            <ul class="box_link">
+                <li><a href="#about">about</a></li>
+                <li><a href="#features">features</a></li>
+                <li><a href="#pricing">pricing</a></li>
+            </ul>
+
+            <!-- line -->
+            <div class="box_time">
+                <div class="col">
+                    <i class="fas fa-map-marker-alt fa-fw"></i>
+                    <p class="text">Riyadh - King Fahd Road</p>
+                </div>
+
+                <div class="col">
+
+                    <i class="far fa-clock fa-fw"></i>
+                    <p>
+                        Business Hours:
+                        <span> From 10:00 To 19:00 </span>
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- info -->
+            <div class="box_info">
+                <a href="#"> <i class="fas fa-phone"></i> 00966 </a>
+                <a href="#"> <i class="fas fa-phone"></i> 00966 </a>
+                <a href="#"> <i class="fas fa-envelope"></i> gmail@gmail.com </a>
+            </div>
+
+        </div>
+
+        <p class="copyright">Made With 💙 Yarob</p>
+    </footer>
+
+    <!-- 
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== (scroll) -->
+
+    <a href="#home" class="fas fa-angle-up" id="scroll_top"></a>
+
+    <!-- 
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== (js) -->
+
+    <!-- slider swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- js -->
+    <script defer src="js/app.js"></script>
+
+    <!-- ==================== -->
+</body>
+
+</html>

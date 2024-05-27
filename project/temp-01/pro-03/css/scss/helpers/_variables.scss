@@ -1,0 +1,36 @@
+$clr--11--main-color: hsl(331, 78%, 59%);
+$clr--11--main-Alt: hsl(331, 78%, 39%);
+
+$clr--11--secondary-color: #ff34990d;
+// ==============================
+
+$clr--11--header-links: #000;
+$clr--11--header-icon: #2d314d;
+
+$clr--11--header-background: #fff;
+$clr--11--header-navbar: #eee;
+
+$clr--11--section-background: #eee;
+$clr--11--footer-background: #191919;
+
+// =======================================
+
+$padding-top--22: 5rem;
+$padding-bottom--22: 5rem;
+
+$transition--22: all 0.2s ease-in-out;
+
+// ==================
+
+$shadow--33: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+$shadow--Alt--33: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+
+// ==================
+
+$border--44: 0.1rem solid rgba(0, 0, 0, 0.1);
+$border--Alt--44: 0.1rem solid rgba(0, 0, 0, 0.2);
+
+$border--color--44: 0.2rem solid $clr--11--main-color;
+
+$border--header--44: 0.5rem solid $clr--11--main-color;
+$border--footer--44: 0.1rem solid #444;

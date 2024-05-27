@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+html {
+    font-size: 62.5%;
+    // ==================
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+    // ==================
+
+    // media._________()
+    @media (max-width: 991px) {
+        font-size: 55%;
+        // ==================
+    }
+
+    // media._________()
+    @media (max-width: 450px) {
+        font-size: 50%;
+        // ==================
+    }
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+        background-color: #bdbdbd;
+        // ==================
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        // ==================
+    }
+
+    &::-webkit-scrollbar-thumb {
+        // ==================
+        background-color: $clr--11--main-color;
+        // ==================
+    }
+
+    // ===
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // ==================
+    outline: none;
+    border: none;
+    // ==================
+    text-transform: capitalize;
+    // ==================
+}
+
+body {
+    // ==================
+    font-family: 'Nunito', sans-serif;
+    // ==================
+}
+
+
+a {
+    text-decoration: none;
+    color: #fff;
+    // ==================
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+/*
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+================== (00) ================== */
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    // ==================
+    margin-left: auto;
+    margin-right: auto;
+    // ==================
+
+    @media (min-width: 768px) {
+        width: 750px;
+        // ==================
+    }
+
+    @media (min-width: 992px) {
+        width: 970px;
+        // ==================
+    }
+
+    @media (min-width: 1200px) {
+        width: 1170px;
+        // ==================
+    }
+}
+
+// ===========================================================
+// ===========================================================
+// ===========================================================
+
+// = media_down
+.hide_for_mobile {
+    // ==================
+
+    @include media_max_stop(tablet) {
+        display: none !important;
+        // ==================
+    }
+}
+
+// = media_up
+.hide_for_desktop {
+    // ==================
+
+    @include media_min_start(tablet) {
+        display: none !important;
+        // ==================
+    }
+}

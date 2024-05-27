@@ -1,0 +1,65 @@
+// 001.==================
+.btn_normal {
+    // ==================
+    display: inline-block;
+    // ==================
+    padding: 1rem 3rem;
+    // ==================
+    color: white;
+    background-color: $clr--11--main-color;
+    // ==================
+    font-size: 1.7rem;
+    font-weight: bold;
+    // ==================
+    border-radius: 0.6rem;
+    border: none;
+    // ==================
+    transition: $transition--22;
+    cursor: pointer;
+    // ==================
+
+    // hover.==================
+    &:hover {
+        // ==================
+        background-color: $clr--11--main-Alt;
+        // ==================
+    }
+
+}
+
+// 001.==================
+// btn animation
+.btn {
+    display: inline-block;
+    // ==================
+    width: fit-content;
+    // ==================
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    // ==================
+    color: $clr--11--main-color;
+    background: linear-gradient(to right, $clr--11--main-color 50%, #000 50%);
+    background-size: 202% 100%;
+    background-position: right bottom;
+    // ==================
+    font-size: 1.8rem;
+    font-weight: bold;
+    // ==================
+    border-radius: 0.5rem;
+    border: 0.2rem solid $clr--11--main-color;
+    // ==================
+    cursor: pointer;
+    // ==================
+    transition: $transition--22;
+    // ==================
+
+
+    // hover.==================
+    &:hover {
+        // ==================
+        color: white;
+        // ==================
+        background-position: left bottom;
+        // ==================
+    }
+}

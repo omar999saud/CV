@@ -1,0 +1,65 @@
+// ==============================================================================
+// ==============================================================================
+
+// max-width
+$max_stop: (
+    "mobail": "767px",
+    "tablet": "991px",
+    "desktop": "1199px"
+);
+
+// min-width
+$min_start: (
+    "mobail": "768px",
+    "tablet": "992px",
+    "desktop": "1200px"
+);
+
+
+@mixin media_max_stop($size) {
+    @media (max-width: map-get($max_stop, $size)) {
+        @content;
+    }
+}
+
+
+@mixin media_min_start($size) {
+    @media (min-width: map-get($min_start, $size)) {
+        @content;
+    }
+}
+
+// ==============================================================================
+// ==============================================================================
+
+
+@mixin grid($var_1, $var_2, $var_3, $gap) {
+    // ==================
+    display: grid;
+    grid-template-columns: #{$var_1}fr;
+    gap: #{$gap}rem;
+    // ==================
+
+    @include media_min_start(mobail) {
+        // ==================
+        grid-template-columns: repeat($var_2, 1fr);
+        // ==================
+    }
+
+    @include media_min_start(tablet) {
+        // ==================
+        grid-template-columns: repeat($var_3, 1fr);
+        // ==================
+    }
+}
+
+// ==============================================================================
+// ==============================================================================
+
+@mixin flex_wrap($gap) {
+    // ==================
+    display: flex;
+    flex-wrap: wrap;
+    gap: #{$gap}rem;
+    // ==================
+}

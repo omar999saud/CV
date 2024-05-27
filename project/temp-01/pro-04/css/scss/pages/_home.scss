@@ -1,0 +1,96 @@
+/*
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+================== (00) ================== */
+// 001.==================
+.home {
+    // ==================
+    display: flex;
+    align-items: center;
+    // ==================
+    min-height: 100vh;
+    // ==================
+    background-image: url(../images/home-img.jpeg);
+    background-size: cover;
+    background-position: center;
+    // ==================
+
+    // media.==================
+    @include media_max_stop(mobail) {
+        // ==================
+        justify-content: center;
+        // ==================
+        background-position: left;
+        // ==================
+        text-align: center;
+        // ==================
+    }
+
+    // 002.==================
+    .container {
+        // ==================
+
+        // 003.==================
+        .content {
+            // ==================
+            max-width: 60rem;
+            // ==================
+
+            // 004.==================
+            h3 {
+                // ==================
+                color: #fff;
+                // ==================
+                font-size: 6rem;
+                text-transform: uppercase;
+                // ==================
+
+                // media.==================
+                @include media_max_stop(mobail) {
+                    // ==================
+                    font-size: 4.5rem;
+                    // ==================
+                }
+            }
+
+            // 004.==================
+            p {
+                // ==================
+                padding: 1rem 0;
+                // ==================
+                color: #eee;
+                // ==================
+                font-size: 2rem;
+                font-weight: lighter;
+                line-height: 1.8;
+                // ==================
+
+                // media.==================
+                @include media_max_stop(mobail) {
+                    // ==================
+                    font-size: 1.5rem;
+                    font-weight: normal;
+                    // ==================
+                }
+            }
+        }
+    }
+}
